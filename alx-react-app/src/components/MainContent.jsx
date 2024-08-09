@@ -9,6 +9,5 @@ return(
 
 );
 
-
 }
 export default MainContent ;
