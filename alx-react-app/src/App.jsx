@@ -31,10 +31,10 @@ function App() {
         </p>
       </div>
       <p className="read-the-docs">
-        Click here for more details !!
+        wa tQaaaaaaaaaaaaad al MeerDDDD !!
       </p>
-      <WelcomeMessage />
       <Header/>
+      <WelcomeMessage />
       <MainContent/>
       <Footer/>
       <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
