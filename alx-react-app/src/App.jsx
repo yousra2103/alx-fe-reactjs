@@ -33,10 +33,10 @@ function App() {
       <p className="read-the-docs">
         wa tQaaaaaaaaaaaaad al MeerDDDD !!
       </p>
-      <Header/>
+      <Header />
       <WelcomeMessage />
-      <MainContent/>
-      <Footer/>
+      <MainContent />
+      <Footer />
       <UserProfile name="Alice" age="25" bio="Loves hiking and photography" />
     </>
   )
