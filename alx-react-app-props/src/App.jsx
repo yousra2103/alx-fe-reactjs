@@ -8,7 +8,7 @@ function App() {
 
   return (
     <>
-      
+      ["UserContext", "UserContext.Provider"]
       <ProfilePage userData={userData} />;
       <MyContext.Provider value={{ state, setState }} />
       <MyContext.Provider />
