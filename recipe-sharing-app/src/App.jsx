@@ -5,6 +5,7 @@ import AddRecipeForm from './components/AddRecipeForm'
 import useRecipeStore from './components/recipeStore'
 import RecipeDetails from './components/RecipeDetails'
 import RecipeForm from './components/EditRecipeForm'
+import Delete from './components/DeleteRecipeButton';
 
 function App() {
  
@@ -22,6 +23,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/recipes" element={<RecipeManager />} />
           <Route path="/recipes/:id" element={<RecipeDetails />} /> {/* Recipe Details Route */}
+          <Route path="/delete" element={<DeleteRecipeButton />} />
         </Routes>
       </div>
     </Router>
@@ -31,6 +33,7 @@ function App() {
       <useRecipeStore />
       <RecipeDetails />
       <RecipeForm />
+      <Delete />
     </>
   )
 }
