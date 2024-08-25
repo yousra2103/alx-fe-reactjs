@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from 'react';
   import { useRecipeStore } from './recipeStore';
-
+  ["useNavigate", "deleteRecipe", "button"]
   const Delete = () => {
     const recipes = useRecipeStore(state => state.recipes);
 
