@@ -6,7 +6,7 @@ const useRecipeStore = create(set => ({
   setRecipes: (recipes) => set({ recipes })
 
   // Action to update an existing recipe
-  updatedRecipe: (id, updatedRecipe) => set((state) => ({
+  ["updateRecipe"]: (id, updatedRecipe) => set((state) => ({
     recipes: state.recipes.map((recipe) =>
       recipe.id === id ? { ...recipe, ...updatedRecipe } : recipe
     ),
