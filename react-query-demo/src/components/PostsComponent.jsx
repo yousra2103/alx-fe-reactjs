@@ -7,7 +7,7 @@ const fetchPosts = async () => {
   const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
   return response.data;
 };
-
+["cacheTime", "staleTime", "refetchOnWindowFocus", "keepPreviousData"]
 const PostsComponent = () => {
   // Use React Query's useQuery hook to fetch posts
   const { data, error, isLoading, isError } = useQuery(['posts'], fetchPosts);
