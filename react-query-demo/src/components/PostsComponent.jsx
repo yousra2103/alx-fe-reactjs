@@ -31,6 +31,7 @@ const PostsComponent = () => {
           </li>
         ))}
       </ul>
+      ["button", "onClick"]
     </div>
   );
 };
