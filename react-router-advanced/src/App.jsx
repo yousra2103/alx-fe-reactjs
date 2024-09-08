@@ -5,6 +5,7 @@ import Profile from './Profile';
 import ProfileDetails from './ProfileDetails';
 import ProfileSettings from './ProfileSettings';
 import BlogPost from './components/BlogPost';
+import ProtectedRoute from './components/ProtectedRoute';
 
 // Dummy components for other routes
 const Home = () => <h2>Home Page</h2>;
@@ -47,6 +48,7 @@ const App = () => {
         </Routes>
       </div>
     </Router>
+    
   );
 };
 
