@@ -4,6 +4,7 @@ import PostsComponent from './PostsComponent';
 import Profile from './Profile';
 import ProfileDetails from './ProfileDetails';
 import ProfileSettings from './ProfileSettings';
+import BlogPost from './components/BlogPost';
 
 // Dummy components for other routes
 const Home = () => <h2>Home Page</h2>;
@@ -41,6 +42,7 @@ const App = () => {
           <Route path="/profile" element={<Profile />}>
             <Route path="details" element={<ProfileDetails />} />
             <Route path="settings" element={<ProfileSettings />} />
+            <Route path="/blog/:id" element={<BlogPost />} />
           </Route>
         </Routes>
       </div>
