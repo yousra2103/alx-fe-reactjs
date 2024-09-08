@@ -13,7 +13,21 @@ const ControlledForm = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
-        if (!username )|| if(!email)  || if (!password) {
+        if (!username ) {
+            setErrors('All fields must be filled out.');
+          } else {
+            setErrors(''); // Clear error message on successful validation
+            // Perform submission logic (e.g., send data to the backend)
+            console.log('Form submitted successfully:', formData);
+          }
+          if(!email) {
+            setErrors('All fields must be filled out.');
+          } else {
+            setErrors(''); // Clear error message on successful validation
+            // Perform submission logic (e.g., send data to the backend)
+            console.log('Form submitted successfully:', formData);
+          }
+          if(!password)  {
             setErrors('All fields must be filled out.');
           } else {
             setErrors(''); // Clear error message on successful validation
