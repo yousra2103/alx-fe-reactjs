@@ -3,7 +3,7 @@ import { useState } from 'react';
 const ControlledForm = () => {
     const [formData, setFormData] = useState({ username: '', email: '', password: '' });
     const [errorMessage, setErrorMessage] = useState('');
-
+    ["value={username}", "value={email}", "value={password}"]
 
     const handleChange = (e) => {
         const { name, value } = e.target;
