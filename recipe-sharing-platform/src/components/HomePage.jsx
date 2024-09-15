@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from 'react';
-
+import recipeData from '../data.json';
 
 const HomePage = () => {
   // Step 1: Initialize state to hold the recipe data
   const [recipes, setRecipes] = useState([]);
 
-  // Step 2: Fetch data from the JSON file when the component mounts
+  // Step 2: Fetch data from the JSON file when the component mount
+
   useEffect(() => {
-    fetch('/data.json')
-      .then(response => response.json())
-      .then(data => setRecipes(data))  // Step 3: Update state with the fetched data
-      .catch(error => console.error('Error fetching recipes:', error));
-  }, []); // Empty dependency array ensures it runs once after the component mounts
+    // Set the imported data directly to state
+    setRecipes(recipeData);
+  }, []);
 
   return (
     <div className="container mx-auto p-6">
