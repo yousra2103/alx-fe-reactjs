@@ -19,7 +19,7 @@ const HomePage = () => {
     {recipes.length === 0 ? (
       <p className="text-center">Loading recipes...</p>
     ) : (
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-3 gap-8">
         {recipes.map((recipe) => (
           <div key={recipe.id} className="bg-white rounded-lg shadow-lg p-6 flex flex-col justify-between">
             <h2 className="text-2xl font-semibold mb-4">{recipe.title}</h2>
