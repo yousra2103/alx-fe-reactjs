@@ -35,25 +35,27 @@
         <div className="container mx-auto p-6">
           {recipe ? (
             <>
-              <h1 className="text-4xl font-bold text-center mb-6">{recipe.title}</h1>
-              <img
-                src={recipe.image} // Assuming there's an image property in the recipe data
-                alt={recipe.title}
-                className="w-full max-w-lg mx-auto rounded-lg shadow-md mb-6"
-              />
-              <h2 className="text-2xl font-semibold mb-4">Ingredients</h2>
-              <ul className="list-disc list-inside mb-6">
-                {recipe.summary.map((summary, index) => (
-                  <li key={index}>{summary}</li>
-                ))}
-              </ul>
-              <h2 className="text-2xl font-semibold mb-4">Instructions</h2>
-              <p className="mb-6">{recipe.summary}</p>
-            </>
-          ) : (
-            <p className="text-center text-red-500">Recipe not found</p>
-          )}
-        </div>
+               
+          <h1 className="text-4xl font-bold text-center mb-6">{recipe.title}</h1>
+          <img
+            src={recipe.image} // Assuming there's an image property in the recipe data
+            alt={recipe.title}
+            className="w-full max-w-lg mx-auto rounded-lg shadow-md mb-6"
+          />
+          <h2 className="text-2xl font-semibold mb-4">Ingredients</h2>
+          <ul className="list-disc list-inside mb-6">
+            {recipe.ingredients.map((ingredient, index) => (
+              <li key={index}>{ingredient}</li>
+            ))}
+          </ul>
+          <h2 className="text-2xl font-semibold mb-4">Instructions</h2>
+          <p className="mb-6">{recipe.instructions}</p>
+        </>
+      ) : (
+        <p className="text-center text-red-500">Recipe not found</p>
+      )}
+    </div>
+       
       );
     };
     
