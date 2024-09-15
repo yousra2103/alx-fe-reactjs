@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import recipeData from '../data.json';
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
   // Step 1: Initialize state to hold the recipe data
@@ -22,6 +23,11 @@ const HomePage = () => {
         {recipes.map((recipe) => (
           <div key={recipe.id} className="bg-white rounded-lg shadow-lg p-6 flex flex-col justify-between">
             <h2 className="text-2xl font-semibold mb-4">{recipe.title}</h2>
+            <Link
+              to={`/recipe/${recipe.id}`}
+              className="text-blue-500 hover:underline"
+            >  View Recipe
+            </Link>
             <p className="mb-2">
               <strong>Ingredients:</strong> {recipe.summary}
             </p>
