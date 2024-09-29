@@ -53,6 +53,8 @@ function Search() {
     value={username}
     onChange={handleInputChange}
   />
+  <input type="text" className="text-center text-3xl font-bold text-blue-600 p-6" >Location</input>
+  <input type="text" className="text-center text-3xl font-bold text-blue-600 p-6" >Minimum Repositories</input>
   <button type="submit">Search</button>
 </form>
 
@@ -62,15 +64,15 @@ function Search() {
 {loading && <p>Loading...</p>}
 
 {/* Error message */}
-{error && <p style={{ color: 'red' }}>Looks like we can't find the user.</p>}
+{error && <p className="text-center text-3xl font-bold text-blue-600 p-6">Looks like we can't find the user.</p>}
 
 {/* Display user data after successful fetch */}
 {userData && (
-  <div style={{ marginTop: '20px' }}>
+  <div className='mt-20'>
     <img
       src={userData.avatar_url}
       alt={`${userData.login}'s avatar`}
-      style={{ width: '150px', borderRadius: '50%' }}
+    className='w-150'
     />
     <h2>{userData.name || userData.login}</h2>
     <a
