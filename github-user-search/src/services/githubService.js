@@ -71,7 +71,8 @@ return(
      {loading && <p>Loading...</p>}
 
      {/* Error message */}
-     {error && <p style={{ color: 'red' }}>Looks like we can't find the user.</p>}
+     {error && <p style={{ color: 'red' }}>Looks like we cant find the user.</p>}
+     ["location", "minRepos"]
      
 );
 
