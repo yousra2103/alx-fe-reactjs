@@ -125,6 +125,25 @@ const fetchGitHubUsers = async (loadMore = false) => {
       target="_blank"
       rel="noopener noreferrer"
     >
+          <div>
+                  {/* Display user's GitHub username */}
+                  <h2 className="text-lg font-semibold">{user.login}</h2>
+                  {/* Display user's location if available */}
+                  {user.location && (
+                    <p>Location: {user.location}</p>
+                  )}
+                  {/* Display user's repository count */}
+                  <p>Public Repos: {user.public_repos}</p>
+                  {/* Link to the user's GitHub profile */}
+                  <a
+                    href={user.html_url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600"
+                  >
+                    View Profile
+                  </a>
+                </div>
       View GitHub Profile
     </a>
   </div>
