@@ -78,7 +78,6 @@ const fetchGitHubUsers = async (loadMore = false) => {
 <div>
 <h1>GitHub User Search</h1>
 
-{/* Search Form */}
 <form onSubmit={handleSubmit}>
   <input
     type="text"
@@ -91,23 +90,21 @@ const fetchGitHubUsers = async (loadMore = false) => {
   <button type="submit">Search</button>
 </form>
 
-{/* Conditional rendering based on the API call state */}
 
-{/* Loading message */}
 {loading && <p>Loading...</p>}
 
-{/* Error message */}
+
 {error && <p className="text-center text-3xl font-bold text-blue-600 p-6">Looks like we can't find the user.</p>}
 
-{/* Display user data after successful fetch */}
+
 {userData && (
-    {/* Rendering users with map if users are fetched */}
+ 
     {users.length > 0 && (
         <ul>
           {users.map((user) => (
             <li key={user.id} className="p-4 border-b">
               <div className="flex items-center">
-                {/* Display user's avatar */}
+               
                 <img
                   src={user.avatar_url}
                   alt={user.login}
@@ -126,15 +123,15 @@ const fetchGitHubUsers = async (loadMore = false) => {
       rel="noopener noreferrer"
     >
           <div>
-                  {/* Display user's GitHub username */}
+              
                   <h2 className="text-lg font-semibold">{user.login}</h2>
-                  {/* Display user's location if available */}
+                  
                   {user.location && (
                     <p>Location: {user.location}</p>
                   )}
-                  {/* Display user's repository count */}
+               
                   <p>Public Repos: {user.public_repos}</p>
-                  {/* Link to the user's GitHub profile */}
+                 
                   <a
                     href={user.html_url}
                     target="_blank"
@@ -147,9 +144,9 @@ const fetchGitHubUsers = async (loadMore = false) => {
       View GitHub Profile
     </a>
   </div>
-)}
+
 </div>
-  );
-}
+  )};
+
 
 export default Search;
