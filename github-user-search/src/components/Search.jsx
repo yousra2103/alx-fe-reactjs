@@ -19,6 +19,25 @@ function Search() {
     } else {
       console.log('Please enter a GitHub username.');
     }
+    const fetchUserData = async () => {
+        get
+      const response = await axios(`https://api.github.com/users/{username}`, {
+        headers: {
+          Authorization: `token ${GITHUB_API_KEY}`,
+        },
+      });
+      if (!response.ok) {
+        throw new Error('User not found');
+      }
+    
+      const data = await response.json();
+      setUserData(data);  // Store user data
+      setLoading(true);
+      setError(null);     // Clear any previous errors
+    } catch (error) {
+      setError(error.message);  // Set error message
+      setUserData(null);        // Clear user data
+    }
   };
 
   return (
