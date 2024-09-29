@@ -41,18 +41,7 @@ return(
 
      {/* Error message */}
      {error && <p style={{ color: 'red' }}>Looks like we can't find the user.</p>}
-     {/* Rendering users with map if users are fetched */}
-     {users.length > 0 && (
-        <ul>
-          {users.map((user) => (
-            <li key={user.id} className="p-4 border-b">
-              <div className="flex items-center">
-                {/* Display user's avatar */}
-                <img
-                  src={user.avatar_url}
-                  alt={user.login}
-                  className="w-16 h-16 rounded-full mr-4"
-                />
+     
 );
 
 

@@ -68,6 +68,18 @@ function Search() {
 
 {/* Display user data after successful fetch */}
 {userData && (
+    {/* Rendering users with map if users are fetched */}
+    {users.length > 0 && (
+        <ul>
+          {users.map((user) => (
+            <li key={user.id} className="p-4 border-b">
+              <div className="flex items-center">
+                {/* Display user's avatar */}
+                <img
+                  src={user.avatar_url}
+                  alt={user.login}
+                  className="w-16 h-16 rounded-full mr-4"
+                />
   <div className='mt-20'>
     <img
       src={userData.avatar_url}
