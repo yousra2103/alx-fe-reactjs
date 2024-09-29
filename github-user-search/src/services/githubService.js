@@ -4,7 +4,25 @@ function Search() {
     const [username, setUsername] = useState('');
     const [userData, setUserData] = useState(null);
     const [error, setError] = useState(null);
+const fetchUserData = async () => {
+    get
+  const response = await axios(`https://api.github.com/users/{username}`, {
+    headers: {
+      Authorization: `token ${GITHUB_API_KEY}`,
+    },
+  });
+  if (!response.ok) {
+    throw new Error('User not found');
+  }
 
+  const data = await response.json();
+  setUserData(data);  // Store user data
+  setLoading(true);
+  setError(null);     // Clear any previous errors
+} catch (error) {
+  setError(error.message);  // Set error message
+  setUserData(null);        // Clear user data
+}
 // Handle form submission
 const handleSubmit = (e) => {
     e.preventDefault();
