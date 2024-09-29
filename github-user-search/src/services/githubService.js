@@ -6,7 +6,7 @@ function Search() {
     const [error, setError] = useState(null);
 const fetchUserData = async () => {
     get
-  const response = await axios(`https://api.github.com/users/{username}`, {
+  const response = await axios(`https://api.github.com/search/users?q={query}`, {
     headers: {
       Authorization: `token ${GITHUB_API_KEY}`,
     },
@@ -41,6 +41,18 @@ return(
 
      {/* Error message */}
      {error && <p style={{ color: 'red' }}>Looks like we can't find the user.</p>}
+     {/* Rendering users with map if users are fetched */}
+     {users.length > 0 && (
+        <ul>
+          {users.map((user) => (
+            <li key={user.id} className="p-4 border-b">
+              <div className="flex items-center">
+                {/* Display user's avatar */}
+                <img
+                  src={user.avatar_url}
+                  alt={user.login}
+                  className="w-16 h-16 rounded-full mr-4"
+                />
 );
 
 
