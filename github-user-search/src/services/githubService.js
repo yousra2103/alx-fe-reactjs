@@ -5,7 +5,7 @@ function Search() {
     const [error, setError] = useState(null);
 const fetchUserData = async () => {
     try
-  const response = await fetch(`https://api.github.com/users/{username}`, {
+  const response = await axios(`https://api.github.com/users/{username}`, {
     headers: {
       Authorization: `token ${GITHUB_API_KEY}`,
     },
