@@ -1,10 +1,11 @@
 const GITHUB_API_KEY = process.env.REACT_APP_GITHUB_API_KEY;
 function Search() {
+    const [loading, setLoading] = useState(false);
     const [username, setUsername] = useState('');
     const [userData, setUserData] = useState(null);
     const [error, setError] = useState(null);
 const fetchUserData = async () => {
-    try
+    get
   const response = await axios(`https://api.github.com/users/{username}`, {
     headers: {
       Authorization: `token ${GITHUB_API_KEY}`,
@@ -16,6 +17,7 @@ const fetchUserData = async () => {
 
   const data = await response.json();
   setUserData(data);  // Store user data
+  setLoading(true);
   setError(null);     // Clear any previous errors
 } catch (error) {
   setError(error.message);  // Set error message
@@ -33,7 +35,13 @@ const handleSubmit = (e) => {
       return data;
 };
 
+return(
+     {/* Loading message */}
+     {loading && <p>Loading...</p>}
 
+     {/* Error message */}
+     {error && <p style={{ color: 'red' }}>Looks like we can't find the user.</p>}
+);
 
 
 export default Search
