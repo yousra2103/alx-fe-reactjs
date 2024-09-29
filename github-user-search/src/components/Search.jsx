@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+Looks like we can't find the user.
 function Search() {
   // State to handle input value (GitHub username)
   const [username, setUsername] = useState('');
